@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feane - Fast Food Restaurant</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;500&display=swap" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+       body {
+            margin: 0;
+            padding: 0;
+            color: #fcf7f7;  
+        }
+
+        header {
+            width:100%;
+            height:100px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family:font_strong;
+            background-color: #000;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-style: italic;
+            color: #ffffff;
+            text-align: center;
+            margin-left: 130px;
+        }
+        .logo img{
+            align-items: center;
+        }
+
+        nav ul {
+            font-size: 18px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-left: 130px;
+        }
+
+        nav li {
+            margin-right: 80px;
+           
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+        nav a:hover{
+            color: #ffc107;
+        }
+
+        .order-button {
+            background-color: #ffc107;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            margin-right: 130px;
+
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width:80%;
+        }
+        .hero img{
+            margin-left: 100px; 
+            padding-top: 80px; 
+        }
+
+        .hero-text {
+            width: 50%;
+            flex: 1;
+            margin-left: 750px;
+            position:absolute;
+            top:250px;
+            color:#000;
+            float:left;
+            padding-top: 130px; 
+          
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family:font_strong;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            color:#000;
+        }
+        .form-container {
+            max-width: 500px;
+            width: 100%;
+            margin-right: 20px;
+        }
+        .form-container h2 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .form-container input, .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container input[type="date"] {
+            padding-right: 30px;
+        }
+        .form-container .book-btn {
+            background-color: #ffc107;
+            padding: 10px 20px;
+            border-radius: 20px;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            width: 30%;
+            border:none;
+        }
+        .map-container {
+            max-width: 1000px;
+            width:100%;
+            height:310px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 5px;
+        }
+        .row{
+            color: #000;
+        }
+        .row h4{
+            color: #ffc107;
+            font-family:font_strong;
+        }
+        .row button{
+            color: #000000;
+            background-color: #ffc107;
+        }
+
+    </style>
+        <script>
+        $(document).ready(function() {
+            $("#btnOpen").click(function(e) {
+                $("#myModal").modal();
+            });
+        });
+        </script>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Feane</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="book.html">Book Table</a></li>
+            </ul>
+        
+        </nav>
+        <i style="font-size:20px"  class="glyphicon glyphicon-user"></i>
+        <i style="font-size:20px" class="fa">&#xf07a;</i>
+        <i style="font-size:20px" class="fa fa-search"></i>
+
+        <a href="#"  class="order-button" style="border-radius: 10%;" id="btnOpen">Order Online</a>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <h2>Book A Table</h2>
+            <input type="text" placeholder="Your Name">
+            <input type="text" placeholder="Phone Number">
+            <input type="email" placeholder="Your Email">
+            <select>
+                <option>How many persons?</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+            <input type="date" placeholder="dd/mm/yyyy">
+            <button class="book-btn">BOOK NOW</button>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.870423847073!2d-74.007139684593!3d40.71277597933156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a316b0b1b1b%3A0x8c0b0b0b0b0b0b0b!2sCity%20Hall%20Park!5e0!3m2!1sen!2sus!4v1633021234567!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="modal fade " id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Order</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="forsdt">Telephone</label>
+                                <input type="text" class="form-control" id="txtsdt" aria-describedby="txtmasv">
+                            </div>
+                            <div class="form-group">
+                                <label for="Forem">Email</label>
+                                <input type="text" class="form-control" id="txtem">
+                            </div>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Order</button>
+                        <button type="button" class="btn btn-primary">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

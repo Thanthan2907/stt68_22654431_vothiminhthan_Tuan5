@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feane - Fast Food Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: #fcf7f7;  
+        }
+
+        header {
+            width:100%;
+            height:100px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family:font_strong;
+            background-color: #000;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-style: italic;
+            color: #ffffff;
+            text-align: center;
+            margin-left: 130px;
+        }
+        .logo img{
+            align-items: center;
+        }
+
+        nav ul {
+            font-size: 18px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            margin-left: 130px;
+        }
+
+        nav li {
+            margin-right: 80px;
+           
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+        nav a:hover{
+            color: #ffc107;
+        }
+
+        .order-button {
+            background-color: #ffc107;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+            margin-right: 130px;
+
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width:80%;
+        }
+        .hero img{
+            margin-left: 100px; 
+            padding-top: 80px; 
+        }
+
+        .hero-text {
+            width: 50%;
+            flex: 1;
+            margin-left: 750px;
+            position:absolute;
+            top:250px;
+            color:#000;
+            float:left;
+            padding-top: 130px; 
+          
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-family:font_strong;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+        .readmore{
+            background-color: #ffc107;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 100px;
+            text-decoration: none;
+        }
+        .row{
+            color: #000;
+        }
+        .row h4{
+            color: #ffc107;
+            font-family:font_strong;
+        }
+        .row button{
+            color: #000000;
+            background-color: #ffc107;
+        }
+
+    </style>
+        <script>
+        $(document).ready(function() {
+            $("#btnOpen").click(function(e) {
+                $("#myModal").modal();
+            });
+        });
+        </script>
+</head>
+<body>   
+   <header>
+        <div class="logo">Feane</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="book.html">Book Table</a></li>
+            </ul>
+        
+        </nav>
+        <i style="font-size:20px"  class="glyphicon glyphicon-user"></i>
+        <i style="font-size:20px" class="fa">&#xf07a;</i>
+        <i style="font-size:20px" class="fa fa-search"></i>
+
+        <a href="#" class="order-button" style="border-radius: 10%;" id="btnOpen">Order Online</a>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>We Are Feane</h1>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All
+                </p>
+            <a href="#" class="readmore">Read More</a>
+        </div>
+        <div>
+            <img src="../img/about-img.png" alt="Burger and Fries" width="80%" height="100%" >
+        </div>
+        <div class="row">
+            <div class="modal fade " id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Order</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="forsdt">Telephone</label>
+                                    <input type="text" class="form-control" id="txtsdt" aria-describedby="txtmasv">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Forem">Email</label>
+                                    <input type="text" class="form-control" id="txtem">
+                                </div>
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Order</button>
+                            <button type="button" class="btn btn-primary">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+</body>
+</html>
